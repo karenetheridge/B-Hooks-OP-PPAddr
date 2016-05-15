@@ -1,7 +1,7 @@
 use strict;
 use warnings;
-
 package B::Hooks::OP::PPAddr;
+# ABSTRACT: Hook into opcode execution
 
 use parent qw/DynaLoader/;
 
@@ -14,10 +14,6 @@ __PACKAGE__->bootstrap($VERSION);
 1;
 
 __END__
-
-=head1 NAME
-
-B::Hooks::OP::PPAddr - Hook into opcode execution
 
 =head1 SYNOPSIS
 
@@ -73,18 +69,7 @@ argument.
 
 =head1 SEE ALSO
 
-L<B::Hooks::OP::Check>
-
-=head1 AUTHOR
-
-Florian Ragwitz E<lt>rafl@debian.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (c) 2008 Florian Ragwitz
-
-This module is free software.
-
-You may distribute this code under the same terms as Perl itself.
+=for :list
+* L<B::Hooks::OP::Check>
 
 =cut
