@@ -34,11 +34,11 @@ __END__
 
 =head1 DESCRIPTION
 
-This module provides a c api for XS modules to hook into the execution of perl
+This module provides a C API for XS modules to hook into the execution of perl
 opcodes.
 
 L<ExtUtils::Depends> is used to export all functions for other XS modules to
-use. Include the following in your Makefile.PL:
+use. Include the following in your F<Makefile.PL>:
 
     my $pkg = ExtUtils::Depends->new('Your::XSModule', 'B::Hooks::OP::PPAddr');
     WriteMakefile(
@@ -50,18 +50,24 @@ Your XS module can now include C<hook_op_ppaddr.h>.
 
 =head1 TYPES
 
-=head2 typedef OP *(*hook_op_ppaddr_cb_t) (pTHX_ OP *, void *user_data)
+=head2 OP
+
+    typedef OP *(*hook_op_ppaddr_cb_t) (pTHX_ OP *, void *user_data)
 
 Type that callbacks need to implement.
 
 =head1 FUNCTIONS
 
-=head2 void hook_op_ppaddr (OP *op, hook_op_ppaddr_cb_t cb, void *user_data)
+=head2 hook_op_ppaddr
+
+    void hook_op_ppaddr (OP *op, hook_op_ppaddr_cb_t cb, void *user_data)
 
 Replace the function to execute C<op> with the callback C<cb>. C<user_data>
 will be passed to the callback as the last argument.
 
-=head2 void hook_op_ppaddr_around (OP *op, hook_op_ppaddr_cb_t before, hook_op_ppaddr_cb_t after, void *user_data)
+=head2 hook_op_ppaddr_around
+
+    void hook_op_ppaddr_around (OP *op, hook_op_ppaddr_cb_t before, hook_op_ppaddr_cb_t after, void *user_data)
 
 Register the callbacks C<before> and C<after> to be called before and after the
 execution of C<op>. C<user_data> will be passed to the callback as the last
