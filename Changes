@@ -1,6 +1,7 @@
 Revision history for B-Hooks-Parser
 
 {{$NEXT}}
+  - release 0.04_01 as stable, with tooling updates.
 
 0.04_01   2009-09-25 15:48:45Z
   - Store static data more safely.
