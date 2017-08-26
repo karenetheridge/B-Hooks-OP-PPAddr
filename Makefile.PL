@@ -26,3 +26,7 @@ WriteMakefile(
     DL_FUNCS => { 'B::Hooks::OP::PPAddr' => [] },
     dist => { PREOP => 'pod2text lib/B/Hooks/OP/PPAddr.pm > $(DISTVNAME)/README' },
 );
+
+use Devel::PPPort;
+Devel::PPPort::WriteFile();
+system("$^X ppport.h --compat-version=5.006 --quiet *.{h,c,xs}");
