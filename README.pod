@@ -8,7 +8,7 @@ B::Hooks::OP::PPAddr - Hook into opcode execution
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -89,7 +89,7 @@ Florian Ragwitz <rafl@debian.org>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Karen Etheridge Alexandr Ciornii
+=for stopwords Karen Etheridge Alexandr Ciornii Stephan Loyd
 
 =over 4
 
@@ -100,6 +100,10 @@ Karen Etheridge <ether@cpan.org>
 =item *
 
 Alexandr Ciornii <alexchorny@gmail.com>
+
+=item *
+
+Stephan Loyd <stephanloyd9@gmail.com>
 
 =back
 
